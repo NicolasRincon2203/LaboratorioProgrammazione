@@ -57,3 +57,48 @@ func main() {
 	}
 	fmt.Println()
 }
+#Es1 Esercizi lasciati dal prof
+package main 
+
+import "fmt"
+
+func main() {
+	var (
+		a, b int=10, 20
+		c int=30
+	)
+	if a>b {
+		a=b
+	}else {
+		b=a
+	}
+	c = c + b +a
+	fmt.Println( a, b, c)
+}
+# Es2 Esercizi lasciati dal prof
+package main 
+import "fmt"
+// Questo programma mette in confronto tre numeri i quali al 
+// verificarsi una delle condizioni stabilite , verrà a stampare il risultato 
+func main() {
+	var a, b, c int
+	var m int
+	fmt.Print("Inserisci i tre numeri che desideri:  ")
+	fmt.Scan(&a,&b,&c)
+
+	if a < b {
+		if a < c {
+			m = a
+		}else {
+			m = c
+		}
+	}else {
+		if b < c {
+			m = b
+		}else {
+			m = c
+		}
+	}
+
+	fmt.Println(m)
+}
