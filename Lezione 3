@@ -42,3 +42,18 @@ func main() {
 }
 
 #SommaCi.go
+package main
+
+import "fmt"
+
+func main() {
+	var n int
+	fmt.Print("Inserisci un int: ")
+	fmt.Scan(&n)
+	fmt.Print(n % 10)// stampa la cifra meno significativa (unità)  di n
+	for n !=0 {
+		
+		n = n / 10
+	}
+	fmt.Println()
+}
