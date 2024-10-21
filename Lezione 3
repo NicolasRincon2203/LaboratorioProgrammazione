@@ -40,3 +40,5 @@ func main() {
 	
 	fmt.Println("somma: ", somma)
 }
+
+#SommaCi.go
