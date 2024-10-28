@@ -17,3 +17,79 @@ func main() {// disegna un triangolo equilatero di dimensioni n
 	}
 	fmt.Println()
 } 
+
+# Quadrato
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var n int
+	fmt.Print("Inserisci un numero intero n: ")
+	fmt.Scan(&n)
+
+	drawSquare(n)
+}
+
+func drawSquare(n int) {
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			fmt.Print("* ")
+		}
+		fmt.Println() // Vai a capo dopo ogni riga
+	}
+}
+
+# Quadrato 2
+package main
+
+import "fmt"
+
+func main() {
+	var n int = 5
+
+	var i, j int
+	for i = 0; i < n; i++ {
+		for j = 0; j < n; j++ {
+			if i%2 == 0 {
+				fmt.Print("*")
+			} else {
+				fmt.Print("+")
+			}
+		}
+		fmt.Println()
+	}
+	fmt.Println()
+}
+# Quadrato 3
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	var n int
+	fmt.Print("Inserisci un numero intero n: ")
+	fmt.Scan(&n)
+
+	for i := 0; i < n; i++ {
+		var line string
+		if i%3 == 0 {
+			line = "*"
+		} else if i%3 == 1 {
+			line = "+"
+		} else {
+			line = "o"
+		}
+
+		// Costruisci la riga con i simboli intervallati da spazi
+		for j := 1; j < n; j++ {
+			line += " " + line
+		}
+
+		fmt.Println(line)
+	}
+}
