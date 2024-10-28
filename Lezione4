@@ -93,3 +93,40 @@ func main() {
 		fmt.Println(line)
 	}
 }
+package main
+
+import (
+	"fmt"
+	"strings"
+	"unicode"
+)
+
+func main() {
+	var input string
+	fmt.Println("Inserisci una stringa senza spazi:")
+	fmt.Scanln(&input)
+
+	var upperCount, lowerCount, consonantCount, vowelCount int
+	vowels := "aeiouAEIOU"
+
+	for _, char := range input {
+		if unicode.IsLetter(char) {
+			if unicode.IsUpper(char) {
+				upperCount++
+			} else {
+				lowerCount++
+			}
+
+			if strings.ContainsRune(vowels, char) {
+				vowelCount++
+			} else {
+				consonantCount++
+			}
+		}
+	}
+
+	fmt.Println("Numero di lettere maiuscole:", upperCount)
+	fmt.Println("Numero di lettere minuscole:", lowerCount)
+	fmt.Println("Numero di consonanti:", consonantCount)
+	fmt.Println("Numero di vocali:", vowelCount)
+}
